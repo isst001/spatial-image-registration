@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Spatial image registration workflow for Seurat/Xenium data"
+type: software
+authors:
+
+* family-names: "Ishishita"
+  given-names: "Satoshi"
+  orcid: "https://orcid.org/0000-0003-4440-4878"
+  repository-code: "https://github.com/isst01/spatial-image-registration"
+  abstract: >
+  R-based semi-automated image registration workflow for Seurat spatial
+  transcriptomics objects using manual anchor selection and thin-plate
+  spline warping.
+  keywords:
+* spatial transcriptomics
+* image registration
+* Seurat
+* Xenium
+* thin plate spline
+  license: MIT
+  version: 1.0.0
+  date-released: 2026-03-11
