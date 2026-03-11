@@ -27,8 +27,7 @@ The pipeline is designed for **Seurat-based spatial objects** (e.g., Xenium / ME
 spatial-image-registration/
 ├── R/
 │   ├── image_registration_public_release.R
-│   ├── run_example.R
-│   └── utils_io.R
+│   └── run_example.R
 ├── inst/
 │   └── extdata/
 │       ├── contour_img_example.png
