@@ -149,6 +149,9 @@ select_polygon_interactively <- function(df, title_text, n_plot = 20000, color =
   set.seed(42)
   idx <- sample(nrow(df), size = min(n_plot, nrow(df)))
 
+  open_external_device()
+  on.exit(dev.off(), add = TRUE)
+
   plot(
     df$x[idx], df$y[idx],
     pch = 16, cex = 0.5, col = color,
@@ -168,6 +171,9 @@ select_polygon_interactively <- function(df, title_text, n_plot = 20000, color =
 collect_anchor_points <- function(df, n_anchor_points, title_text, n_plot = 100000) {
   set.seed(42)
   idx <- sample(nrow(df), size = min(n_plot, nrow(df)))
+
+  open_external_device()
+  on.exit(dev.off(), add = TRUE)
 
   plot(
     df$x[idx], df$y[idx],
@@ -237,6 +243,10 @@ summarize_anchor_residuals <- function(anchors) {
     max_dist = max(anchors$dist),
     sd_dist = sd(anchors$dist)
   )
+}
+
+open_external_device <- function(width = 10, height = 10) {
+  dev.new(width = width, height = height, noRStudioGD = TRUE)
 }
 
 # =============================================================================
